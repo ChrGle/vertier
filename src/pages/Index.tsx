@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
-import heroBuilding from "@/assets/hero-building.jpg";
+import heroOffice from "@/assets/hero-office.jpg";
+import platformDashboard from "@/assets/platform-dashboard.png";
+import platformStructure from "@/assets/platform-structure.png";
 import { ArrowRight, Building2, Zap, Shield, Users } from "lucide-react";
 
 const Index = () => {
@@ -12,8 +14,8 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroBuilding})` }}
+          className="absolute inset-0 bg-cover bg-center animate-ken-burns"
+          style={{ backgroundImage: `url(${heroOffice})` }}
         >
           <div className="absolute inset-0 bg-primary/85" />
         </div>
@@ -97,31 +99,70 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Two Column Section */}
+      {/* Platform Preview Section */}
       <section className="py-20 bg-secondary/50">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Administration</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Hantera er fastighetsportfölj effektivt med verktyg för fastighetsstruktur, 
-                hyresgästkommunikation, mobilanpassat gränssnitt, rollanpassad dashboard, 
-                rapporter, dokumenthantering och avtalshantering.
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4">Plattformen i aktion</h2>
+              <p className="text-xl text-muted-foreground">
+                Se hur Vertier Property Platform förenklar er fastighetsförvaltning
               </p>
-              <Button asChild variant="default">
-                <Link to="/plattform">Läs mer om plattformen</Link>
-              </Button>
             </div>
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Processstöd</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Effektivisera era processer med integrerat stöd för inköp, kundservice, 
-                uthyrning, underhållsplaner, serviceärenden, besiktning och accesshantering. 
-                Allt i en sammanhängande plattform.
-              </p>
-              <Button asChild variant="default">
-                <Link to="/plattform">Se hela lösningen</Link>
-              </Button>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              <div className="bg-card rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src={platformDashboard} 
+                  alt="Vertier Dashboard - Översikt och analys" 
+                  className="w-full h-auto"
+                />
+                <div className="p-6">
+                  <h3 className="text-2xl font-semibold mb-3">Översiktlig Dashboard</h3>
+                  <p className="text-muted-foreground">
+                    Få en komplett översikt över er verksamhet med realtidsdata och interaktiva analyser
+                  </p>
+                </div>
+              </div>
+              
+              <div className="bg-card rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src={platformStructure} 
+                  alt="Vertier Fastighetsstruktur" 
+                  className="w-full h-auto"
+                />
+                <div className="p-6">
+                  <h3 className="text-2xl font-semibold mb-3">Fastighetsstruktur</h3>
+                  <p className="text-muted-foreground">
+                    Hantera hela er fastighetsportfölj med en tydlig och strukturerad hierarki
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold mb-6">Administration</h2>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Hantera er fastighetsportfölj effektivt med verktyg för fastighetsstruktur, 
+                  hyresgästkommunikation, mobilanpassat gränssnitt, rollanpassad dashboard, 
+                  rapporter, dokumenthantering och avtalshantering.
+                </p>
+                <Button asChild variant="default">
+                  <Link to="/plattform">Läs mer om plattformen</Link>
+                </Button>
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold mb-6">Processstöd</h2>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Effektivisera era processer med integrerat stöd för inköp, kundservice, 
+                  uthyrning, underhållsplaner, serviceärenden, besiktning och accesshantering. 
+                  Allt i en sammanhängande plattform.
+                </p>
+                <Button asChild variant="default">
+                  <Link to="/plattform">Se hela lösningen</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
