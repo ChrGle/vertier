@@ -22,8 +22,43 @@ const OmOss = () => {
           </div>
         </section>
 
-        {/* Mission Section */}
+        {/* Story Section */}
         <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-8">Vår historia</h2>
+              <div className="prose prose-lg mx-auto text-muted-foreground space-y-4">
+                <p>
+                  Vertier AB grundades 2022 med en tydlig vision om att skapa ett modernt system som förenar 
+                  fastighetsbolagens processer och förvandlar dem till konkret affärsnytta.
+                </p>
+                <p>
+                  Vi såg hur många aktörer i branschen arbetar med isolerade system, manuella rutiner och 
+                  tidskrävande arbetsflöden, vilket gör att mycket av potentialen går förlorad. Därför byggde 
+                  vi Vertier på en solid grund av djup branscherfarenhet och teknisk spetskompetens inom 
+                  Microsoft Dynamics-plattformen.
+                </p>
+                <p>
+                  Vår kärna består av experter med lång erfarenhet från några av Sveriges största fastighetsbolag, 
+                  tillsammans med en delägare med omfattande utvecklingskompetens inom Microsofts ekosystem. 
+                  Den kombinationen gör att vi kan forma lösningar som inte bara digitaliserar utan verkligen effektiviserar.
+                </p>
+                <p>
+                  Vertier drivs av en genuin passion för att förbättra fastighetsbranschen. Med över 25 års samlad 
+                  erfarenhet från ledande positioner har vi en djup förståelse för branschens utmaningar och hur de 
+                  kan vändas till möjligheter.
+                </p>
+                <p>
+                  Vårt mål är enkelt men kraftfullt att skapa system som frigör tid, minskar kostnader och ger 
+                  fastighetsbolag förutsättningar att växa hållbart, datadrivet och framtidssäkert.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Mission Section */}
+        <section className="py-20 bg-secondary/50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid md:grid-cols-3 gap-12">
@@ -57,7 +92,7 @@ const OmOss = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-20 bg-secondary/50">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12">Teamet bakom Vertier</h2>
@@ -135,40 +170,6 @@ const OmOss = () => {
           </div>
         </section>
 
-        {/* Story Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-8">Vår historia</h2>
-              <div className="prose prose-lg mx-auto text-muted-foreground space-y-4">
-                <p>
-                  Vertier AB grundades 2022 med en tydlig vision om att skapa ett modernt system som förenar 
-                  fastighetsbolagens processer och förvandlar dem till konkret affärsnytta.
-                </p>
-                <p>
-                  Vi såg hur många aktörer i branschen arbetar med isolerade system, manuella rutiner och 
-                  tidskrävande arbetsflöden, vilket gör att mycket av potentialen går förlorad. Därför byggde 
-                  vi Vertier på en solid grund av djup branscherfarenhet och teknisk spetskompetens inom 
-                  Microsoft Dynamics-plattformen.
-                </p>
-                <p>
-                  Vår kärna består av experter med lång erfarenhet från några av Sveriges största fastighetsbolag, 
-                  tillsammans med en delägare med omfattande utvecklingskompetens inom Microsofts ekosystem. 
-                  Den kombinationen gör att vi kan forma lösningar som inte bara digitaliserar utan verkligen effektiviserar.
-                </p>
-                <p>
-                  Vertier drivs av en genuin passion för att förbättra fastighetsbranschen. Med över 25 års samlad 
-                  erfarenhet från ledande positioner har vi en djup förståelse för branschens utmaningar och hur de 
-                  kan vändas till möjligheter.
-                </p>
-                <p>
-                  Vårt mål är enkelt men kraftfullt att skapa system som frigör tid, minskar kostnader och ger 
-                  fastighetsbolag förutsättningar att växa hållbart, datadrivet och framtidssäkert.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       {/* Footer */}
