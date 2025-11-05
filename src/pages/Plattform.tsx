@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import processDiagram from "@/assets/process-diagram.jpg";
 import { Building2, MessageCircle, Paperclip, FileText } from "lucide-react";
+import { Input } from "@/components/ui/input";
 const Plattform = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
@@ -27,6 +28,9 @@ const Plattform = () => {
               <h2 className="text-3xl font-bold text-center mb-12">
                 Så fungerar plattformen
               </h2>
+              <div className="mb-8 max-w-md mx-auto">
+                <Input type="text" placeholder="Skriv här..." />
+              </div>
               <div className="bg-card rounded-lg shadow-lg p-8">
                 <img src={processDiagram} alt="Vertier Property Platform - Process diagram" className="w-full h-auto" />
               </div>
