@@ -29,11 +29,7 @@ const Plattform = () => {
                 Så fungerar plattformen
               </h2>
               <div className="mb-8 max-w-2xl mx-auto">
-                <Input 
-                  type="text" 
-                  placeholder="Skriv här..." 
-                  className="h-14 text-lg px-6 border-2 focus-visible:ring-offset-4"
-                />
+                
               </div>
               <div className="bg-card rounded-lg shadow-lg p-8">
                 <img src={processDiagram} alt="Vertier Property Platform - Process diagram" className="w-full h-auto" />
