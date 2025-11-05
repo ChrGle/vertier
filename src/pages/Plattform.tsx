@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import processDiagram from "@/assets/process-diagram.jpg";
-import { Building2, Users, Gem, FileText } from "lucide-react";
+import { Building2, Users, Paperclip, FileText } from "lucide-react";
 
 const Plattform = () => {
   return (
@@ -68,7 +68,7 @@ const Plattform = () => {
                   </p>
                 </div>
                 <div className="bg-card p-6 rounded-lg shadow-sm">
-                  <Gem className="w-12 h-12 text-accent mb-4" />
+                  <Paperclip className="w-12 h-12 text-accent mb-4" />
                   <h3 className="text-xl font-semibold mb-2">Dokument-hantering</h3>
                   <p className="text-muted-foreground">
                     Centraliserad dokumenthantering
