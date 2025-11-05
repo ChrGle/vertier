@@ -1,10 +1,8 @@
 import Navigation from "@/components/Navigation";
 import processDiagram from "@/assets/process-diagram.jpg";
 import { Building2, MessageCircle, Paperclip, FileText } from "lucide-react";
-
 const Plattform = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       <main className="pt-20">
@@ -30,11 +28,7 @@ const Plattform = () => {
                 Så fungerar plattformen
               </h2>
               <div className="bg-card rounded-lg shadow-lg p-8">
-                <img 
-                  src={processDiagram} 
-                  alt="Vertier Property Platform - Process diagram" 
-                  className="w-full h-auto"
-                />
+                <img src={processDiagram} alt="Vertier Property Platform - Process diagram" className="w-full h-auto" />
               </div>
             </div>
           </div>
@@ -123,14 +117,8 @@ const Plattform = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-6">Integrationer</h2>
-              <p className="text-lg opacity-90 mb-8">
-                Vertier Property Platform integrerar sömlöst med era befintliga system för 
-                styr- och regler, IMD-mätning, marknad, accessystem, energideklaration, 
-                fastighetsdata, visualisering och ekonomi.
-              </p>
-              <p className="text-lg opacity-90">
-                Dessutom erbjuder vi inbyggda integrationer med Dynamics för ännu mer kraft och flexibilitet.
-              </p>
+              <p className="text-lg opacity-90 mb-8">Vertier Property Platform kan integreras sömlöst med era befintliga system för styr- och regler, IMD-mätning, marknad, accessystem, energideklaration, fastighetsdata, visualisering och ekonomi.</p>
+              <p className="text-lg opacity-90">Dessutom används de inbyggda integrationer med Microsoft för ännu mer kraft och flexibilitet.</p>
             </div>
           </div>
         </section>
@@ -146,8 +134,6 @@ const Plattform = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Plattform;
