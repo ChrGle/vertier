@@ -57,40 +57,6 @@ const OmOss = () => {
           </div>
         </section>
 
-        {/* Mission Section */}
-        <section className="py-20 bg-secondary/50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-3 gap-12">
-                <div className="text-center">
-                  <Target className="w-16 h-16 text-accent mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold mb-4">Vårt uppdrag</h3>
-                  <p className="text-muted-foreground">
-                    Att leverera den bästa plattformen för fastighetsförvaltning som förenklar 
-                    vardagen för fastighetsförvaltare och hyresgäster.
-                  </p>
-                </div>
-                <div className="text-center">
-                  <Users className="w-16 h-16 text-accent mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold mb-4">Våra värderingar</h3>
-                  <p className="text-muted-foreground">
-                    Vi tror på öppenhet, innovation och nära samarbete med våra kunder. 
-                    Tillsammans skapar vi lösningar som verkligen gör skillnad.
-                  </p>
-                </div>
-                <div className="text-center">
-                  <Lightbulb className="w-16 h-16 text-accent mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold mb-4">Innovation</h3>
-                  <p className="text-muted-foreground">
-                    Vi utvecklar ständigt nya funktioner och förbättringar baserat på 
-                    branschens behov och den senaste tekniken.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Team Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -164,6 +130,40 @@ const OmOss = () => {
                       </a>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Mission Section */}
+        <section className="py-20 bg-secondary/50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-3 gap-12">
+                <div className="text-center">
+                  <Target className="w-16 h-16 text-accent mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-4">Vårt uppdrag</h3>
+                  <p className="text-muted-foreground">
+                    Att leverera den bästa plattformen för fastighetsförvaltning som förenklar 
+                    vardagen för fastighetsförvaltare och hyresgäster.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <Users className="w-16 h-16 text-accent mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-4">Våra värderingar</h3>
+                  <p className="text-muted-foreground">
+                    Vi tror på öppenhet, innovation och nära samarbete med våra kunder. 
+                    Tillsammans skapar vi lösningar som verkligen gör skillnad.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <Lightbulb className="w-16 h-16 text-accent mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-4">Innovation</h3>
+                  <p className="text-muted-foreground">
+                    Vi utvecklar ständigt nya funktioner och förbättringar baserat på 
+                    branschens behov och den senaste tekniken.
+                  </p>
                 </div>
               </div>
             </div>
