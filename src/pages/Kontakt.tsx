@@ -4,11 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin } from "lucide-react";
-
 const Kontakt = () => {
   const [sent, setSent] = useState(false);
   const [captchaOk, setCaptchaOk] = useState(false);
-
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // hindra 404 / sidladdning
 
@@ -16,29 +14,22 @@ const Kontakt = () => {
       alert("Vänligen bekräfta att du inte är en robot.");
       return;
     }
-
     const formData = new FormData(event.currentTarget);
     const name = formData.get("name") ?? "";
     const email = formData.get("email") ?? "";
     const company = formData.get("company") ?? "";
     const message = formData.get("message") ?? "";
-
     const subject = encodeURIComponent("Kontakt via vertier.se");
-    const body = encodeURIComponent(
-      `Namn: ${name}
+    const body = encodeURIComponent(`Namn: ${name}
 E-post: ${email}
 Företag: ${company}
 
 Meddelande:
-${message}`
-    );
-
+${message}`);
     window.location.href = `mailto:info@vertier.se?subject=${subject}&body=${body}`;
     setSent(true);
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
 
       <main className="pt-20">
@@ -73,10 +64,7 @@ ${message}`
                     <Mail className="w-6 h-6 text-accent mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">E-post</h3>
-                      <a
-                        href="mailto:info@vertier.se"
-                        className="text-muted-foreground hover:text-accent transition-colors"
-                      >
+                      <a href="mailto:info@vertier.se" className="text-muted-foreground hover:text-accent transition-colors">
                         info@vertier.se
                       </a>
                     </div>
@@ -95,84 +83,7 @@ ${message}`
               </div>
 
               {/* Form */}
-              <div className="bg-card p-8 rounded-lg shadow-lg border border-border">
-                <form className="space-y-6" onSubmit={handleSubmit}>
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      Namn *
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      placeholder="Ditt namn"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
-                      E-post *
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="din@email.se"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium mb-2">
-                      Företag
-                    </label>
-                    <Input
-                      id="company"
-                      name="company"
-                      type="text"
-                      placeholder="Ditt företag"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      Meddelande *
-                    </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      placeholder="Berätta hur vi kan hjälpa dig..."
-                      rows={5}
-                      required
-                    />
-                  </div>
-
-                  {/* CAPTCHA */}
-                  <div className="flex items-center space-x-3 bg-muted/30 p-3 rounded-md border">
-                    <input
-                      id="captcha"
-                      type="checkbox"
-                      className="w-5 h-5"
-                      onChange={(e) => setCaptchaOk(e.target.checked)}
-                    />
-                    <label htmlFor="captcha" className="text-sm">
-                      Jag är inte en robot
-                    </label>
-                  </div>
-
-                  <Button type="submit" className="w-full">
-                    Skicka meddelande
-                  </Button>
-
-                  {sent && (
-                    <p className="text-sm text-green-600 mt-2">
-                      Tack! Vi har öppnat ett e-postmeddelande åt dig. Skicka det
-                      från din mailklient så hör vi av oss.
-                    </p>
-                  )}
-                </form>
-              </div>
+              
             </div>
           </div>
         </section>
@@ -188,8 +99,6 @@ ${message}`
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Kontakt;
