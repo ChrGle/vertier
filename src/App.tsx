@@ -11,12 +11,18 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// "/" i dev (Lovable), "/vertier/" på GitHub Pages
+const rawBase = import.meta.env.BASE_URL;
+// gör om "/vertier/" → "/vertier" och lämna "/" som undefined
+const basename =
+  rawBase === "/" ? undefined : rawBase.replace(/\/$/, "");
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/vertier">
+      <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/plattform" element={<Plattform />} />
