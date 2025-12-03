@@ -108,8 +108,10 @@ const Index = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <div className="bg-card rounded-lg overflow-hidden shadow-lg">
-                <img alt="Vertier Dashboard - Översikt och analys" src="/lovable-uploads/3c786d33-60d9-43db-ab4a-617618dc5566.jpg" className="w-full h-auto object-contain border-2 border-solid" />
+              <div className="bg-card rounded-lg overflow-hidden shadow-lg flex flex-col">
+                <div className="h-64 overflow-hidden">
+                  <img alt="Vertier Dashboard - Översikt och analys" src="/lovable-uploads/3c786d33-60d9-43db-ab4a-617618dc5566.jpg" className="w-full h-full object-cover" />
+                </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-semibold mb-3">Översiktlig Dashboard</h3>
                   <p className="text-muted-foreground">
@@ -118,8 +120,10 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="bg-card rounded-lg overflow-hidden shadow-lg">
-                <img alt="Vertier Fastighetsstruktur" className="w-full h-auto" src="/lovable-uploads/ce9bce44-9467-49b6-a25d-956e156fde0b.jpg" />
+              <div className="bg-card rounded-lg overflow-hidden shadow-lg flex flex-col">
+                <div className="h-64 overflow-hidden">
+                  <img alt="Vertier Fastighetsstruktur" className="w-full h-full object-cover" src="/lovable-uploads/ce9bce44-9467-49b6-a25d-956e156fde0b.jpg" />
+                </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-semibold mb-3">Ärendehantering</h3>
                   <p className="text-muted-foreground">
