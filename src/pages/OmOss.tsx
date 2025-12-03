@@ -1,10 +1,8 @@
 import Navigation from "@/components/Navigation";
 import { Target, Users, Lightbulb, Mail, Phone } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-
 const OmOss = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       <main className="pt-20">
@@ -78,7 +76,7 @@ const OmOss = () => {
                       </a>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Phone className="w-4 h-4" />
+                      
                       <a href="tel:+46702531341" className="hover:text-foreground transition-colors">
                         +46 702-53 13 41
                       </a>
@@ -182,8 +180,6 @@ const OmOss = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default OmOss;
