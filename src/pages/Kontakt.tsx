@@ -1,12 +1,42 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin } from "lucide-react";
+
 const Kontakt = () => {
-  return <div className="min-h-screen bg-background">
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault(); // hindra full sidladdning / 404
+
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get("name") ?? "";
+    const email = formData.get("email") ?? "";
+    const company = formData.get("company") ?? "";
+    const message = formData.get("message") ?? "";
+
+    const subject = encodeURIComponent("Kontakt via vertier.se");
+    const body = encodeURIComponent(
+      `Namn: ${name}
+E-post: ${email}
+Företag: ${company}
+
+Meddelande:
+${message}`
+    );
+
+    // Öppna användarens e-postklient
+    window.location.href = `mailto:info@vertier.se?subject=${subject}&body=${body}`;
+
+    setSent(true);
+  };
+
+  return (
+    <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 bg-primary text-primary-foreground">
@@ -30,34 +60,31 @@ const Kontakt = () => {
               <div>
                 <h2 className="text-3xl font-bold mb-8">Hör av dig</h2>
                 <p className="text-muted-foreground mb-8">
-                  Fyll i formuläret så återkommer vi inom kort. Du kan även nå oss 
-                  direkt via telefon eller e-post.
+                  Fyll i formuläret så återkommer vi inom kort. Du kan även nå oss
+                  direkt via e-post.
                 </p>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <Mail className="w-6 h-6 text-accent mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">E-post</h3>
-                      <a href="mailto:info@vertier.se" className="text-muted-foreground hover:text-accent transition-colors">
+                      <a
+                        href="mailto:info@vertier.se"
+                        className="text-muted-foreground hover:text-accent transition-colors"
+                      >
                         info@vertier.se
                       </a>
                     </div>
                   </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    
-                    <div>
-                      
-                      
-                    </div>
-                  </div>
-                  
+
                   <div className="flex items-start space-x-4">
                     <MapPin className="w-6 h-6 text-accent mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Adress</h3>
-                      <p className="text-muted-foreground">Stockholm, Göteborg, Helsingborg, Sverige</p>
+                      <p className="text-muted-foreground">
+                        Stockholm, Göteborg, Helsingborg, Sverige
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -65,38 +92,80 @@ const Kontakt = () => {
 
               {/* Form */}
               <div className="bg-card p-8 rounded-lg shadow-lg border border-border">
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Namn *
                     </label>
-                    <Input id="name" type="text" placeholder="Ditt namn" required />
+                    <Input
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="Ditt namn"
+                      required
+                    />
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium mb-2"
+                    >
                       E-post *
                     </label>
-                    <Input id="email" type="email" placeholder="din@email.se" required />
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="din@email.se"
+                      required
+                    />
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="company"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Företag
                     </label>
-                    <Input id="company" type="text" placeholder="Ditt företag" />
+                    <Input
+                      id="company"
+                      name="company"
+                      type="text"
+                      placeholder="Ditt företag"
+                    />
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Meddelande *
                     </label>
-                    <Textarea id="message" placeholder="Berätta hur vi kan hjälpa dig..." rows={5} required />
+                    <Textarea
+                      id="message"
+                      name="message"
+                      placeholder="Berätta hur vi kan hjälpa dig..."
+                      rows={5}
+                      required
+                    />
                   </div>
-                  
+
                   <Button type="submit" className="w-full">
                     Skicka meddelande
                   </Button>
+
+                  {sent && (
+                    <p className="text-sm text-green-600 mt-2">
+                      Tack! Vi har öppnat ett e-postmeddelande åt dig. Skicka det
+                      från din mailklient så hör vi av oss.
+                    </p>
+                  )}
                 </form>
               </div>
             </div>
@@ -114,6 +183,8 @@ const Kontakt = () => {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default Kontakt;
