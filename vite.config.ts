@@ -4,7 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/", // viktigt för GitHub Pages med egen domän
+  base: "/vertier/", // viktigt för GitHub Pages med egen domän
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
