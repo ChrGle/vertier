@@ -11,18 +11,26 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Gör basename dynamiskt baserat på Vites BASE_URL
+const rawBase = import.meta.env.BASE_URL; // "/" i dev, "/vertier/" i build
+const basename =
+  rawBase === "/"
+    ? undefined
+    : rawBase.endsWith("/")
+    ? rawBase.slice(0, -1)
+    : rawBase;
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/vertier">
+      <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/plattform" element={<Plattform />} />
           <Route path="/om-oss" element={<OmOss />} />
           <Route path="/kontakt" element={<Kontakt />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
