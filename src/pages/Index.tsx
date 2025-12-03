@@ -46,9 +46,8 @@ const Index = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Varför välja Vertier?</h2>
-              <p className="text-xl text-muted-foreground">
-                En plattform som förenklar och effektiviserar hela er fastighetsförvaltning
-              </p>
+              <p className="text-xl text-muted-foreground">En plattform som förenklar och effektiviserar hela er fastighetsförvaltning,
+Mer än 25 års erfarenhet av fastighetsbranschen</p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
