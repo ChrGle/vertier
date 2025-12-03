@@ -54,10 +54,7 @@ ${message}`);
               {/* Contact Info */}
               <div>
                 <h2 className="text-3xl font-bold mb-8">Hör av dig</h2>
-                <p className="text-muted-foreground mb-8">
-                  Fyll i formuläret så återkommer vi inom kort. Du kan även nå oss
-                  direkt via e-post.
-                </p>
+                <p className="text-muted-foreground mb-8">Vi vill gärna komma i kontakt med dig. Skicka oss gärna ett mail, så hör vi av oss.</p>
 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
