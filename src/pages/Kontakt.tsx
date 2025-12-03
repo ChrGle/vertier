@@ -7,9 +7,15 @@ import { Mail, MapPin } from "lucide-react";
 
 const Kontakt = () => {
   const [sent, setSent] = useState(false);
+  const [captchaOk, setCaptchaOk] = useState(false);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); // hindra full sidladdning / 404
+    event.preventDefault(); // hindra 404 / sidladdning
+
+    if (!captchaOk) {
+      alert("Vänligen bekräfta att du inte är en robot.");
+      return;
+    }
 
     const formData = new FormData(event.currentTarget);
     const name = formData.get("name") ?? "";
@@ -27,9 +33,7 @@ Meddelande:
 ${message}`
     );
 
-    // Öppna användarens e-postklient
     window.location.href = `mailto:info@vertier.se?subject=${subject}&body=${body}`;
-
     setSent(true);
   };
 
@@ -94,10 +98,7 @@ ${message}`
               <div className="bg-card p-8 rounded-lg shadow-lg border border-border">
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium mb-2"
-                    >
+                    <label htmlFor="name" className="block text-sm font-medium mb-2">
                       Namn *
                     </label>
                     <Input
@@ -110,10 +111,7 @@ ${message}`
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium mb-2"
-                    >
+                    <label htmlFor="email" className="block text-sm font-medium mb-2">
                       E-post *
                     </label>
                     <Input
@@ -126,10 +124,7 @@ ${message}`
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="company"
-                      className="block text-sm font-medium mb-2"
-                    >
+                    <label htmlFor="company" className="block text-sm font-medium mb-2">
                       Företag
                     </label>
                     <Input
@@ -141,10 +136,7 @@ ${message}`
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium mb-2"
-                    >
+                    <label htmlFor="message" className="block text-sm font-medium mb-2">
                       Meddelande *
                     </label>
                     <Textarea
@@ -154,6 +146,19 @@ ${message}`
                       rows={5}
                       required
                     />
+                  </div>
+
+                  {/* CAPTCHA */}
+                  <div className="flex items-center space-x-3 bg-muted/30 p-3 rounded-md border">
+                    <input
+                      id="captcha"
+                      type="checkbox"
+                      className="w-5 h-5"
+                      onChange={(e) => setCaptchaOk(e.target.checked)}
+                    />
+                    <label htmlFor="captcha" className="text-sm">
+                      Jag är inte en robot
+                    </label>
                   </div>
 
                   <Button type="submit" className="w-full">
