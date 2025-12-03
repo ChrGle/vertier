@@ -57,9 +57,7 @@ const Kontakt = () => {
                     <MapPin className="w-6 h-6 text-accent mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Adress</h3>
-                      <p className="text-muted-foreground">
-                        Stockholm, Sverige
-                      </p>
+                      <p className="text-muted-foreground">Stockholm, Göteborg, Helsingborg, Sverige</p>
                     </div>
                   </div>
                 </div>
