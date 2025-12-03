@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import heroOffice from "@/assets/hero-office.jpg";
-import platformDashboard from "@/assets/platform-dashboard.png";
-import platformStructure from "@/assets/platform-structure.png";
+import platformDashboard from "@/assets/Dash FVC.jpg";
+import platformStructure from "@/assets/Ärende.jpg";
 import { ArrowRight, Building2, Zap, Shield, Users } from "lucide-react";
 const Index = () => {
   return <div className="min-h-screen bg-background">
@@ -112,7 +112,7 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               <div className="bg-card rounded-lg overflow-hidden shadow-lg flex flex-col">
                 <div className="h-64 overflow-hidden">
-                  <img alt="Vertier Dashboard - Översikt och analys" src="/lovable-uploads/3c786d33-60d9-43db-ab4a-617618dc5566.jpg" className="w-full h-full object-cover" />
+                  <img alt="Vertier Dashboard - Översikt och analys" src={platformDashboard} className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-semibold mb-3">Översiktlig Dashboard</h3>
@@ -124,7 +124,7 @@ const Index = () => {
               
               <div className="bg-card rounded-lg overflow-hidden shadow-lg flex flex-col">
                 <div className="h-64 overflow-hidden">
-                  <img alt="Vertier Fastighetsstruktur" className="w-full h-full object-cover" src="/lovable-uploads/ce9bce44-9467-49b6-a25d-956e156fde0b.jpg" />
+                  <img alt="Vertier Ärende" className="w-full h-full object-cover" src={platformStructure} />
                 </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-semibold mb-3">Ärendehantering</h3>
