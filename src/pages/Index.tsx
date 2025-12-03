@@ -189,7 +189,7 @@ const Index = () => {
               <div>
                 <h3 className="font-semibold mb-4">Vertier AB</h3>
                 <p className="text-sm text-muted-foreground">
-                  Ledande plattform för fastighetsförvaltning
+                  Modern plattform för fastighetsförvaltning
                 </p>
               </div>
               <div>
