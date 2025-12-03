@@ -63,7 +63,7 @@ ${message}`);
                   <div className="flex items-start space-x-4">
                     <Mail className="w-6 h-6 text-accent mt-1" />
                     <div>
-                      <h3 className="font-semibold mb-1">Vi vill gärna komma i kontakt med dig. Skicka oss gärna ett mail, så hör vi av oss.                       </h3>
+                      <h3 className="font-semibold mb-1">E-post</h3>
                       <a href="mailto:info@vertier.se" className="text-muted-foreground hover:text-accent transition-colors">
                         info@vertier.se
                       </a>
