@@ -49,9 +49,7 @@ const Kontakt = () => {
                     <Phone className="w-6 h-6 text-accent mt-1" />
                     <div>
                       
-                      <a href="tel:+46123456789" className="text-muted-foreground hover:text-accent transition-colors">
-                        +46 12 345 67 89
-                      </a>
+                      
                     </div>
                   </div>
                   
