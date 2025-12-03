@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 const Kontakt = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
@@ -46,7 +46,7 @@ const Kontakt = () => {
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <Phone className="w-6 h-6 text-accent mt-1" />
+                    
                     <div>
                       
                       
