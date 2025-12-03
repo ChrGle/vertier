@@ -3,10 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
-
 const Kontakt = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       <main className="pt-20">
@@ -50,7 +48,7 @@ const Kontakt = () => {
                   <div className="flex items-start space-x-4">
                     <Phone className="w-6 h-6 text-accent mt-1" />
                     <div>
-                      <h3 className="font-semibold mb-1">Telefon</h3>
+                      
                       <a href="tel:+46123456789" className="text-muted-foreground hover:text-accent transition-colors">
                         +46 12 345 67 89
                       </a>
@@ -97,12 +95,7 @@ const Kontakt = () => {
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
                       Meddelande *
                     </label>
-                    <Textarea 
-                      id="message" 
-                      placeholder="Berätta hur vi kan hjälpa dig..." 
-                      rows={5}
-                      required 
-                    />
+                    <Textarea id="message" placeholder="Berätta hur vi kan hjälpa dig..." rows={5} required />
                   </div>
                   
                   <Button type="submit" className="w-full">
@@ -125,8 +118,6 @@ const Kontakt = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Kontakt;
