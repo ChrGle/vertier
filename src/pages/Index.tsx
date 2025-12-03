@@ -216,8 +216,8 @@ const Index = () => {
                 <h3 className="font-semibold mb-4">Kontakt</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>info@vertier.se</li>
-                  <li>+46 12 345 67 89</li>
-                  <li>Stockholm, Sverige</li>
+                  
+                  <li>Stockholm, Göteborg, Helsingborg, Sverige</li>
                 </ul>
               </div>
             </div>
