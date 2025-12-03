@@ -5,18 +5,15 @@ import heroOffice from "@/assets/hero-office.jpg";
 import platformDashboard from "@/assets/platform-dashboard.png";
 import platformStructure from "@/assets/platform-structure.png";
 import { ArrowRight, Building2, Zap, Shield, Users } from "lucide-react";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center animate-ken-burns"
-          style={{ backgroundImage: `url(${heroOffice})` }}
-        >
+        <div className="absolute inset-0 bg-cover bg-center animate-ken-burns" style={{
+        backgroundImage: `url(${heroOffice})`
+      }}>
           <div className="absolute inset-0 bg-primary/85" />
         </div>
         
@@ -112,11 +109,7 @@ const Index = () => {
             
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               <div className="bg-card rounded-lg overflow-hidden shadow-lg">
-                <img 
-                  src={platformDashboard} 
-                  alt="Vertier Dashboard - Översikt och analys" 
-                  className="w-full h-auto"
-                />
+                <img alt="Vertier Dashboard - Översikt och analys" src="/lovable-uploads/3c786d33-60d9-43db-ab4a-617618dc5566.jpg" className="w-full h-auto object-contain border-2 border-solid" />
                 <div className="p-6">
                   <h3 className="text-2xl font-semibold mb-3">Översiktlig Dashboard</h3>
                   <p className="text-muted-foreground">
@@ -126,13 +119,9 @@ const Index = () => {
               </div>
               
               <div className="bg-card rounded-lg overflow-hidden shadow-lg">
-                <img 
-                  src={platformStructure} 
-                  alt="Vertier Fastighetsstruktur" 
-                  className="w-full h-auto"
-                />
+                <img alt="Vertier Fastighetsstruktur" className="w-full h-auto" src="/lovable-uploads/ce9bce44-9467-49b6-a25d-956e156fde0b.jpg" />
                 <div className="p-6">
-                  <h3 className="text-2xl font-semibold mb-3">Fastighetsstruktur</h3>
+                  <h3 className="text-2xl font-semibold mb-3">Ärendehantering</h3>
                   <p className="text-muted-foreground">
                     Hantera hela er fastighetsportfölj med en tydlig och strukturerad hierarki
                   </p>
@@ -234,8 +223,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
