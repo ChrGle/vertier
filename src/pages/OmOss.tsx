@@ -77,9 +77,7 @@ const OmOss = () => {
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       
-                      <a href="tel:+46702531341" className="hover:text-foreground transition-colors">
-                        +46 702-53 13 41
-                      </a>
+                      
                     </div>
                   </div>
                 </div>
@@ -100,9 +98,7 @@ const OmOss = () => {
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Phone className="w-4 h-4" />
-                      <a href="tel:+46709588805" className="hover:text-foreground transition-colors">
-                        +46 709-58 88 05
-                      </a>
+                      
                     </div>
                   </div>
                 </div>
