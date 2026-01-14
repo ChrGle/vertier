@@ -224,7 +224,7 @@ const Index = () => {
               </div>
             </div>
             <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-              <p>© 2024 Vertier AB. Alla rättigheter förbehållna.</p>
+              <p>© 2026 Vertier AB. Alla rättigheter förbehållna.</p>
             </div>
           </div>
         </div>
